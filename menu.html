@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Only sell milk 😉</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .ql {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background: lightseagreen;
+            height: 100px;
+            gap: 40px; 
+        }
+        .logo {
+            font-weight: bold;
+            color: indianred;
+            white-space: nowrap;
+			font-family: 'Lobster', cursive;
+        	font-size: 36px;
+        	color: #FFFFFF;
+        	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+			
+        }
+        .seb {
+            border-radius: 25px;
+            padding: 2px;
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+            margin-left: auto; 
+        }
+        .seb #id01 {
+            border: none;
+            padding: 8px 12px;
+            outline: none;
+            width: 200px;
+            font-size: 14px;
+            background: transparent;
+        }
+        .seb button {
+            border: none;
+            background-color: transparent;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly; 
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%; 
+    }
+
+    ul li {
+        flex: 1;
+        text-align: center;
+        position: relative;
+    }
+
+    ul li a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+        transition: background-color 0.3s ease;
+    }
+
+    ul li:hover a {
+        background: rgba(255, 255, 255, 0.2); 
+        border-radius: 5px; 
+    }
+	.mndoc{
+			opacity: 0;
+		    position: absolute;
+		    top: 100%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    background-color: white;
+		    list-style: none;
+		    width: 300px;
+		    padding: 10px 0;
+		    border-radius: 10px; 
+		}
+		.menu:hover .mndoc{
+			opacity: 0.8;
+			display: block;
+		}
+		.mndoc li a{
+			color: black;
+			display: block;
+			text-decoration: none;
+		}
+		.mndoc li a:hover{
+			background: #f0f0f0;
+		}
+    </style>
+</head>
+<body>
+    <div class="ql">
+        <div class="logo">HERE WE ONLY SELL 100% FRESH MILK</div>
+        
+        <div class="seb">
+            <input type="text" placeholder="Tìm Kiếm..." id="id01">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+
+        <ul>
+            <li><a href="#">Trang Chủ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            
+            <li class="menu">
+                <a href="#">Cửa Hàng <i class="fas fa-caret-down"></i></a>
+                <ul class="mndoc">
+                    <li><a href="#">SỮA TƯƠI NGUYÊN </a></li>
+                    <li><a href="#">SỮA THỰC VẬT</a></li>
+                    <li><a href="#">SỮA ÍT</a></li>
+                    <li><a href="#">SỮA HƯƠNG VỊ</a></li>
+                    <li><a href="#">SỮA CANXI</a></li>
+                    <li><a href="#">SỮA TƯƠI KHÁC</a></li>
+                    <li><a href="#">SỮA ĐẶC</a></li>
+                    <li><a href="#">NGUYÊN LIỆU PHA CHẾ</a></li>
+                    <li><a href="#">THỰC PHẨM</a></li>
+                    <li><a href="#">THỰC PHẦM ĂN KIÊNG</a></li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a href="#">Nhãn Hàng <i class="fas fa-caret-down"></i></a>
+                <ul class="mndoc">
+                    <li><a href="#">MEADOW FRESH</a></li>
+                    <li><a href="#">EQUAL</a></li>
+                    <li><a href="#">MLEKOVITA</a></li>
+                    <li><a href="#">UFC VELVET</a></li>
+                    <li><a href="#">VINAMILK</a></li>
+                    <li><a href="#">NUTIFOOD</a></li>
+                    <li><a href="#">MILO</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin Tức</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="#">Đăng Nhập</a></li>
+            <li><a href="#">Đăng Ký</a></li>
+        </ul>
+    </div>
+</body>
+</html>
