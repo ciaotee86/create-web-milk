@@ -13,43 +13,46 @@
 		}
 		.ql{
 			display: flex;
-			align-items: center;
-			
+			align-items: center;	
 			padding: 10px 20px;
-			
 			background: green;
+			height:100px;
 		}
 		.logo{
-			font_weight: bold;
+			font-weight: bold;
 			font-size:32px;
 			color: indianred;
 			margin-right: 100px;
 		}
 		ul{
 			list-style:none;
-			padding:0;
-			margin: 0;
+			padding:5px;
+			margin: 5px;
 			display:flex;
-			align:center ;
-			justify-content:center;
 			margin-left: 100px;
 			color:white ;
 		}
 		ul li{
 			margin: 10px;
-			padding: 2px;
 		}
 		ul li a{
 			color: white;
 			font-size:20px;
 			text-decoration: none;
+			padding: 5px 10px;
+			display: inline-block;
+		}
+		ul li:hover a{	
+			transition: 0.1s;
+			border-top:2px solid white;
+			
 		}
 		.seb{
 			align-items: center;
 			border-radius:25px;
-			overflow:hidden;
 			padding:2px;
 			background-color:whitesmoke;
+			display:flex;
 		}
 		.seb #id01{
 			border:none;
@@ -57,6 +60,7 @@
 			outline:none;
 			width: 200px;
 			font-size:14px;
+			background: transparent;
 		}
 		.seb button{
 			border:none;
@@ -65,6 +69,34 @@
 			cursor: pointer;
 			font-size:16px;
 		}
+		li.menu {
+ 			 position: relative;
+		}
+		.mndoc{
+			opacity: 0;
+		    position: absolute;
+		    top: 100%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    background-color: white;
+		    list-style: none;
+		    width: 300px;
+		    padding: 10px 0;
+		    border-radius: 10px; 
+		}
+		.menu:hover .mndoc{
+			opacity: 0.8;
+			display: block;
+		}
+		.mndoc li a{
+			color: black;
+			display: block;
+			text-decoration: none;
+		}
+		.mndoc li a:hover{
+			background: #f0f0f0;
+		}
+
 	</style>
 </head>
 <body>
@@ -73,14 +105,35 @@
 		<div class="seb">
 			<input type="text" name="" placeholder="Tìm Kiếm..." id="id01">
 			<button type="submit"><i class="fas fa-search"></i></button>
-
 			</div>
 			<ul>
 				
 				<li><a href="#"> Trang Chủ</a></li>
 				<li><a href="#"> Giới Thiệu</a></li>
-				<li><a href="#"> Cửa Hàng</a></li>
-				<li><a href="#"> Nhãn Hàng</a></li>
+				<li class="menu"><a href="#"> Cửa Hàng</a>
+					<ul class="mndoc">
+						<li><a href="#">SỮA TƯƠI NGUYÊN </a></li>
+						<li><a href="#">SỮA THỰC VẬT</a></li>
+						<li><a href="#">SỮA ÍT</a></li>
+						<li><a href="#">SỮA HƯƠNG VỊ</a></li>
+						<li><a href="#">SỮA CANXI</a></li>
+						<li><a href="#">SỮA TƯƠI KHÁC</a></li>
+						<li><a href="#">SỮA ĐẶC</a></li>
+						<li><a href="#">NGUYÊN LIỆU PHA CHẾ</a></li>
+						<li><a href="#">THỰC PHẨM</a></li>
+						<li><a href="#">THỰC PHẦM ĂN KIÊNG</a></li>
+					</ul></li>
+				<li class="menu"><a href="#"> Nhãn Hàng</a>
+					<ul class="mndoc">
+						<li><a href="#">MEADOW FRESH</a></li>
+						<li><a href="#">EQUAL</a></li>
+						<li><a href="#">MLEKOVITA</a></li>
+						<li><a href="#">UFC VELVET</a></li>
+						<li><a href="#">VINAMILK</a></li>
+						<li><a href="#">NUTIFOOD</a></li>
+						<li><a href="#">MILO</a></li>
+					</ul>
+				</li>
 				<li><a href="#"> Tin Tức</a></li>
 				<li><a href="#"> Liên Hệ</a></li>
 		</ul>
