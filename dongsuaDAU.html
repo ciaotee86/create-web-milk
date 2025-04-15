@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>We Only sell milk 😉</title>
@@ -10,23 +11,78 @@
 			margin: 0;
 			padding: 0;
 		}
-		div{
-			border: 1px solid red;
-			width: 100%;
-			height:50px;
+		.ql{
+			display: flex;
+			align-items: center;
+			
+			padding: 10px 20px;
+			
+			background: green;
+		}
+		.logo{
+			font_weight: bold;
+			font-size:32px;
+			color: indianred;
+			margin-right: 100px;
+		}
+		ul{
+			list-style:none;
+			padding:0;
+			margin: 0;
+			display:flex;
+			align:center ;
+			justify-content:center;
+			margin-left: 100px;
+			color:white ;
+		}
+		ul li{
+			margin: 10px;
+			padding: 2px;
+		}
+		ul li a{
+			color: white;
+			font-size:20px;
+			text-decoration: none;
+		}
+		.seb{
+			align-items: center;
+			border-radius:25px;
+			overflow:hidden;
+			padding:2px;
+			background-color:whitesmoke;
+		}
+		.seb #id01{
+			border:none;
+			padding: 8px 12px;
+			outline:none;
+			width: 200px;
+			font-size:14px;
+		}
+		.seb button{
+			border:none;
+			background-color: transparent;
+			padding: 8px 12px;
+			cursor: pointer;
+			font-size:16px;
 		}
 	</style>
 </head>
 <body>
-	<div>
-		<p>Động Sữa Tươi 100% </p>
-		<ul>
-			<li><input type="text" name="" value="Tìm Kiếm,...">
-				<input type="submit" name="" </li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+	<div class="ql">
+		<div class="logo"> HERE WE ONLY SELL 100% FRESH MILK</div>
+		<div class="seb">
+			<input type="text" name="" placeholder="Tìm Kiếm..." id="id01">
+			<button type="submit"><i class="fas fa-search"></i></button>
+
+			</div>
+			<ul>
+				
+				<li><a href="#"> Trang Chủ</a></li>
+				<li><a href="#"> Giới Thiệu</a></li>
+				<li><a href="#"> Cửa Hàng</a></li>
+				<li><a href="#"> Nhãn Hàng</a></li>
+				<li><a href="#"> Tin Tức</a></li>
+				<li><a href="#"> Liên Hệ</a></li>
 		</ul>
 	</div>
 </body>
