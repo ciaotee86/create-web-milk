@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Only sell milk 😉</title>
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -25,11 +25,10 @@
             font-weight: bold;
             color: indianred;
             white-space: nowrap;
-			font-family: 'Lobster', cursive;
-        	font-size: 45px;
-        	color: #FFFFFF;
-        	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-			
+      font-family: 'Lobster', cursive;
+          font-size: 32px;
+          color: #FFFFFF;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
         }
         .seb {
             border-radius: 25px;
@@ -54,84 +53,138 @@
             cursor: pointer;
             font-size: 16px;
         }
-		ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly; 
-        align-items: center;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        width: 100%; 
-    }
+    ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly; 
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%; 
+        }
 
-    ul li {
-        flex: 1;
-        text-align: center;
-        position: relative;
-    }
+        ul li {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
 
-    ul li a {
-        color: white;
-        font-size: 18px;
-        text-decoration: none;
-        display: block;
-        padding: 10px 0;
-        transition: background-color 0.3s ease;
-    }
+        ul li a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            transition: background-color 0.3s ease;
+        }
 
-    ul li:hover a {
-        background: rgba(255, 255, 255, 0.2); 
-        border-radius: 5px; 
-    }
+        ul li:hover a {
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 5px; 
+        }
 
-    .mndoc {
-        opacity: 0;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%) translateY(10px); 
-        background-color: white;
-        list-style: none;
-        width: 300px;
-        height: auto;
-        padding: 10px 0;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-        display: none;
-        transition: all 0.3s ease;
-    }
+        .mndoc {
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px); 
+            background-color: white;
+            list-style: none;
+            width: 300px;
+            height: auto;
+            padding: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            display: none;
+            transition: all 0.3s ease;
+        }
 
-    .menu:hover .mndoc {
-        opacity: 1;
-        display: block; 
-        transform: translateX(-50%) translateY(0);
-    }
+        .menu:hover .mndoc {
+            opacity: 1;
+            display: block; 
+            transform: translateX(-50%) translateY(0);
+        }
 
-    .mndoc li {
-        text-align: left;
-        padding: 5px 20px;
-    }
+        .mndoc li {
+            text-align: left;
+            padding: 5px 20px;
+        }
 
-    .mndoc li a {
-        color: black;
-        display: block;
-        text-decoration: none;
-        font-size: 16px;
-        padding: 5px 0;
-        transition: background-color 0.3s ease;
-    }
+        .mndoc li a {
+            color: black;
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 0;
+            transition: background-color 0.3s ease;
+        }
 
-    .mndoc li a:hover {
-        background: #f0f0f0;
-        border-radius: 5px;
-    }
+        .mndoc li a:hover {
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .ql2 {
+            
+            width: 100%;
+           max-width: 900px;         
+            height: auto;
+            position: relative;
+            margin: 40px auto;        
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .content img {
+            width: 100% ;
+            border-radius: 10px;
+            height: 400px;
+            flex-shrink: 0;
+            object-fit: cover;
+
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+        .container{
+            background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-hand-drawn-milk-banner-background-picture-image_927636.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
     <div class="ql">
-        <div class="logo">HERE WE ONLY SELL 100% FRESH MILK</div>
+        <div class="logo">HERE WE ONLY SELL <br>100% FRESH MILK</div>
         
         <div class="seb">
             <input type="text" placeholder="Tìm Kiếm..." id="id01">
@@ -143,7 +196,7 @@
             <li><a href="#">Giới Thiệu</a></li>
             
             <li class="menu">
-                <a href="#">Cửa Hàng <i class="fas fa-caret-down"></i></a>
+                <a href="#">Sản Phẩm <i class="fas fa-caret-down"></i></a>
                 <ul class="mndoc">
                     <li><a href="#">SỮA TƯƠI NGUYÊN </a></li>
                     <li><a href="#">SỮA THỰC VẬT</a></li>
@@ -161,19 +214,57 @@
                 <a href="#">Nhãn Hàng <i class="fas fa-caret-down"></i></a>
                 <ul class="mndoc">
                     <li><a href="#">MEADOW FRESH</a></li>
-                    <li><a href="#">EQUAL</a></li>
-                    <li><a href="#">MLEKOVITA</a></li>
+                    <li><a href="#">FAMI</a></li>
+                    <li><a href="#">TH TRUE MILK</a></a></li>
                     <li><a href="#">UFC VELVET</a></li>
                     <li><a href="#">VINAMILK</a></li>
                     <li><a href="#">NUTIFOOD</a></li>
                     <li><a href="#">MILO</a></li>
                 </ul>
             </li>
-            <li><a href="#">Tin Tức</a></li>
+            <li><a href="#">Giỏ Hàng</a></li>
             <li><a href="#">Liên Hệ</a></li>
-            <li><a href="#">Đăng Nhập</a></li>
-            <li><a href="#">Đăng Ký</a></li>
+            <li><a href="GiaoDienDangKy.html">Đăng Nhập</a></li>
+            <li><a href="GiaoDienDangKy.html">Đăng Ký</a></li>
         </ul>
     </div>
+</body>
+<body class="container">
+    <div class="ql2">
+        <button class="arrow arrow-left" onclick="quaylai()">&#8249;</button>
+        <div class="content" id="carousel">
+            <img src="https://cdn1.concung.com/storage/2024/10/1730260294-loc-4-hop-gp-sua-non-vang-2-tetra-180ml-cd-crop.webp" alt="banner">
+            <img src="https://images2.thanhnien.vn/528068263637045248/2024/8/22/kv-oat-17243165902111989544692.jpg" alt="banner">
+            <img src="https://pano.vn/wp-content/uploads/2021/05/Fami-quang-cao-o-to-becar-2.jpg" alt="banner">
+            <img src="https://olymstore.net/storage/01.11.2024/Olymstore%20002684%20(1).jpg" alt="banner">
+        </div>
+        <button class="arrow arrow-right" onclick="tientoi()">&#8250;</button>
+    </div>
+
+    <script>
+        let index = 0;
+        const carousel = document.querySelector(".content");
+        const images = document.querySelectorAll(".content img");
+
+        function updateCarousel() {
+            const imgWidth = images[0].clientWidth;
+            carousel.style.transform = `translateX(-${index * imgWidth}px)`;
+        }
+
+        function quaylai() {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        }   
+
+        function tientoi() {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        }
+        setInterval(() => {
+            tientoi();
+        }, 3000);
+        window.addEventListener('resize', updateCarousel);
+        window.addEventListener('load', updateCarousel);
+    </script>
 </body>
 </html>
