@@ -18,17 +18,17 @@
             align-items: center;
             padding: 0 20px;
             background: lightseagreen;
-            height: 100px;
+            height: 80px;
             gap: 40px; 
         }
         .logo {
             font-weight: bold;
             color: indianred;
             white-space: nowrap;
-      font-family: 'Lobster', cursive;
-          font-size: 32px;
-          color: #FFFFFF;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+            font-family: 'Lobster', cursive;
+            font-size: 30px;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
         }
         .seb {
             border-radius: 25px;
@@ -147,7 +147,7 @@
         .content img {
             width: 100% ;
             border-radius: 10px;
-            height: 400px;
+            height: 560px;
             flex-shrink: 0;
             object-fit: cover;
 
@@ -175,10 +175,48 @@
             right: 10px;
         }
         .container{
+
             background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-hand-drawn-milk-banner-background-picture-image_927636.jpg');
             background-size: cover;
+
             background-position: center;
             background-repeat: no-repeat;
+        }
+        .line{
+            text-align: center;
+            margin: 60px auto 40px auto;
+            position: relative;
+            width: 90%;
+        }
+        .line span{
+            display: inline-block;
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 28px;
+            font-family: 'Lobster', cursive;
+            white-space: nowrap;
+            background-color: #20B2AA;
+            padding: 0 20px;
+            position: relative;
+        }
+        .line::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            border-top: 5px solid #00CED1;
+           
+        }
+        .sp{
+            border: 1px solid red;
+            width: 100%;
+            height: 650px;
+            background-color: rgba(255, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 40px 20px;
+            margin: 60px auto;
         }
     </style>
 </head>
@@ -240,7 +278,10 @@
         </div>
         <button class="arrow arrow-right" onclick="tientoi()">&#8250;</button>
     </div>
-
+    <div class="line">
+        <span><i class="fas fa-angle-left"></i>Sản Phẩm <i class="fas fa-angle-right"></i> </</span>
+    </div>
+    <div class="sp"></div>
     <script>
         let index = 0;
         const carousel = document.querySelector(".content");
@@ -266,5 +307,7 @@
         window.addEventListener('resize', updateCarousel);
         window.addEventListener('load', updateCarousel);
     </script>
+    
 </body>
+
 </html>
