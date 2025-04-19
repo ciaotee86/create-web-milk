@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Only sell milk 😉</title>
@@ -18,10 +20,11 @@
             align-items: center;
             padding: 0 20px;
             background: lightseagreen;
-            height: 80px;
+            height: 68px;
             gap: 40px; 
         }
-        .logo {
+        .logo a{
+            text-decoration: none;
             font-weight: bold;
             color: indianred;
             white-space: nowrap;
@@ -149,7 +152,7 @@
             border-radius: 10px;
             height: 560px;
             flex-shrink: 0;
-            object-fit: cover;
+            
 
         }
 
@@ -188,7 +191,7 @@
             position: relative;
             width: 90%;
         }
-        .line span{
+        .line .nh1{
             display: inline-block;
             font-weight: bold;
             color: #FFFFFF;
@@ -218,11 +221,41 @@
             padding: 40px 20px;
             margin: 60px auto;
         }
+        html {
+             scroll-behavior: smooth;
+        }
+        .contentgt{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1rem;
+        }
+        h2{
+            font-size: 30px;
+            color: #2bbbad;
+            margin-bottom: 20px;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .ql-img img{
+            width: 590px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+
+        }
+        .ql-text{
+            max-width: 500px;
+            font-size: 1.2rem;
+            font-family: 'Quicksand', sans-serif;
+            list-height: 1.2rem;
+        }
     </style>
 </head>
 <body>
     <div class="ql">
-        <div class="logo">HERE WE ONLY SELL <br>100% FRESH MILK</div>
+        <div class="logo"><a href="menu.html">THE FRESH UDDER</a></div>
         
         <div class="seb">
             <input type="text" placeholder="Tìm Kiếm..." id="id01">
@@ -230,8 +263,8 @@
         </div>
 
         <ul>
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="menu.html">Trang Chủ</a></li>
+            <li><a href="#gioi-thieu">Giới Thiệu</a></li>
             
             <li class="menu">
                 <a href="#">Sản Phẩm <i class="fas fa-caret-down"></i></a>
@@ -257,7 +290,7 @@
                     <li><a href="#">UFC VELVET</a></li>
                     <li><a href="#">VINAMILK</a></li>
                     <li><a href="#">NUTIFOOD</a></li>
-                    <li><a href="#">MILO</a></li>
+                    <li><a href="#">NestLé</a></li>
                 </ul>
             </li>
             <li><a href="#">Giỏ Hàng</a></li>
@@ -265,23 +298,39 @@
             <li><a href="GiaoDienDangKy.html">Đăng Nhập</a></li>
             <li><a href="GiaoDienDangKy.html">Đăng Ký</a></li>
         </ul>
+
     </div>
 </body>
 <body class="container">
     <div class="ql2">
         <button class="arrow arrow-left" onclick="quaylai()">&#8249;</button>
         <div class="content" id="carousel">
-            <img src="https://cdn1.concung.com/storage/2024/10/1730260294-loc-4-hop-gp-sua-non-vang-2-tetra-180ml-cd-crop.webp" alt="banner">
+            <img src="https://www.meadowfresh.co.nz/assets/5558_QuickBrekkie_Ph2_Homepage_2000x1071__FitWzE5MjAsOTUwXQ.jpg" alt="banner">
             <img src="https://images2.thanhnien.vn/528068263637045248/2024/8/22/kv-oat-17243165902111989544692.jpg" alt="banner">
             <img src="https://pano.vn/wp-content/uploads/2021/05/Fami-quang-cao-o-to-becar-2.jpg" alt="banner">
-            <img src="https://olymstore.net/storage/01.11.2024/Olymstore%20002684%20(1).jpg" alt="banner">
+            <img src="https://honghanhshop.dinogpt.vn/wp-content/uploads/sites/561/2024/08/sua-chua-uong-proby-845x264-1-e1723740205867.png" alt="banner">
+            <img src="https://vntre.vn/uploads/images/2024/04/11/1-thung-vinamilk-bao-nhieu-tien-6-1712852331.png" alt="banner">
+            <img src="https://suachobeyeu.vn/upload/images/thung-sua-milo-bua-sang-can-bang-hop-195ml-11.jpg" alt="banner">
         </div>
         <button class="arrow arrow-right" onclick="tientoi()">&#8250;</button>
     </div>
     <div class="line">
-        <span><i class="fas fa-angle-left"></i>Sản Phẩm <i class="fas fa-angle-right"></i> </</span>
+        <section id="gioi-thieu">
+        <span class="nh1"><i class="fas fa-angle-left"></i>Giới Thiệu<i class="fas fa-angle-right"></i></span>
+        </section>
     </div>
-    <div class="sp"></div>
+<div class="contentgt">
+    <div class="ql-img">       
+        <img  src="C:\Users\gamer\Downloads\banner.png" alt="banner giới thiệu">  
+    </div>
+        <div class="ql-text">
+            <h2><b>About us</b></h2>
+            <p>Tại The Fresh Udder, chúng tôi tin rằng mỗi giọt sữa tươi bạn nhận được không chỉ đơn thuần là một sản phẩm – đó là tâm huyết, chất lượng và sự minh bạch. <br><br>
+            Với vai trò là đối tác phân phối trung gian đáng tin cậy, The Fresh Udder chuyên lựa chọn và cung cấp các sản phẩm sữa tươi 100% từ những thương hiệu lớn <br>và uy tín nhất trên thị trường như Vinamilk, TH True Milk, NutiFood, MeaDow Fresh, Fami, NestLé, … <br><br>Chúng tôi không tự sản xuất – nhưng chúng tôi lựa chọn kỹ càng thay bạn, để mang đến những gì tinh túy và đáng tin cậy nhất.</p>
+    </div>
+</div>  
+    
+    
     <script>
         let index = 0;
         const carousel = document.querySelector(".content");
