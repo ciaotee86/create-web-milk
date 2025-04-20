@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lien he voi chung toi</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.container{
+			display: flex;
+			justify-content: center;
+			height: 100vh;
+			align-items: center;
+			flex-direction: column;
+		}
+		.container .thongtin{
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+			gap: 15px;
+			border: 3px solid black;
+			width: 1000px;
+			height: 800px;
+			border-radius: 15px;
+		}
+		.container .thongtin input{
+			height: 50px;
+			font-size: 20px;
+			padding: 12px;
+			border-radius: 15px;
+			
+
+		}
+		.container .thongtin select{
+			height: 50px;
+			font-size: 20px;
+			padding: 12px;
+			border-radius: 15px;
+			
+		}
+		.gui {
+			height: 150px;
+			border-radius: 15px;
+			background-color: lightseagreen;
+			 font-family: 'Lobster', cursive;
+			 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+			 font-size:20px;
+		}
+		.gui:hover{
+			background-color: rgba(32, 178, 170,0 );
+		}
+		.thongtin { 
+			text-align: center;
+		}
+		.thongtin b{
+			font-size: 50px;
+		}
+		.thongtin p{
+			font-size: 20px;
+		}
+		.TEXT{
+			 font-family: 'Lobster', cursive;
+			 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+			 font-size:20px;
+			 color: white;
+		}
+		body{
+			 background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-hand-drawn-milk-banner-background-picture-image_927636.jpg');
+            background-size: cover;
+
+            background-position: center;
+            background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form action="/submit">
+		<div class="thongtin">
+				<div class="TEXT">
+			<b>LIÊN HỆ VỚI CHÚNG TÔI</b>
+			<p>Mọi thắc mắc và yêu cầu cần hỗ trợ từ chúng tôi, vui lòng để lại thông tin tại đây</p>
+			<p>Chúng tôi sẽ xem xét và gửi phản hồi sớm nhất</p>
+			</div>
+			<input type="text" required name="ten" placeholder="Họ tên*">
+			<input type="email" required name="email" placeholder="Email*">
+			<input type="text" required name="diachi" placeholder="Địa chỉ*">
+			<input type="text" required name="sdt" placeholder="Số điện thoại*">
+			<input type="text" required name="tieude" placeholder="Tiêu đề*">
+			<select id="chon">
+				<option disabled selected>-- Thể Loại --</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<input type="text" name="nd" required placeholder="Nội dung*" style="height: 500px;">
+			<button class="gui" type="submit">Gửi phản hồi</button>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
