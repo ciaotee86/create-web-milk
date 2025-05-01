@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bảng thêm sp</title>
+	<style type="text/css">
+		.container{
+			display: flex;
+			justify-content: center;
+			justify-items: center;
+			height: 100vh;
+			position: relative;
+		}
+		.bang{
+			display: block;
+			width: 300px;
+			height: 500px;
+			border: 2px solid red;
+			padding: 10px	;
+		}
+		.bang h1{
+			text-align: center;
+		}
+		.bang table{
+			text-align: center;
+			  flex-direction: column;
+		}
+		.bang table tr td input{
+			width: 200px;
+			height: 30px;
+			text-align: center;
+		}
+		.bang table tr td{
+			text-align: center;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+		<div class="container">
+			<div class="bang">
+				<h1>Thêm sản phẩm</h1>
+				<table>
+				<tr><td><input type="text" name="Tensp" placeholder="Nhập tên sản phẩm"></td></tr>
+				<tr><td><input type="text" name="Giasp" placeholder="Giá sản phẩm"></td></tr>
+				<tr><td><div class="thongtin"><input type="text" name="TTSP" placeholder="Thông tin chi tiết sản phẩm"></div></td></tr>
+				<tr><td><input type="file" id="imageUpload" name="image" accept="image/*"></td></tr>
+				</table>
+			</div>
+		</div>
+</body>
+</html>
