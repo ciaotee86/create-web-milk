@@ -5,7 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bảng thêm sp</title>
 	<style type="text/css">
+		*{
+			padding: 0;
+			margin:0;
+			box-sizing:border-box;
+		}
 		.container{
+			padding-top: 100px;
+			 background-image: url('https://png.pngtree.com/background/20210709/original/pngtree-hand-drawn-milk-banner-background-picture-image_927636.jpg');
+            background-size: cover;
+
+            background-position: center;
+            background-repeat: no-repeat;s
+
 			display: flex;
 			justify-content: center;
 			justify-items: center;
@@ -13,27 +25,52 @@
 			position: relative;
 		}
 		.bang{
+			border-radius: 10px;
+			justify-items: center;
+			background: lightseagreen;
 			display: block;
-			width: 300px;
-			height: 500px;
-			border: 2px solid red;
-			padding: 10px	;
+			width: 500px;
+			height: 500px;	
+			padding: 50px	;
 		}
 		.bang h1{
-			text-align: center;
+			text-decoration: none;
+            font-weight: bold;
+            color: indianred;
+            white-space: nowrap;
+            font-family: 'Lobster', cursive;
+            font-size: 30px;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 		}
 		.bang table{
 			text-align: center;
 			  flex-direction: column;
 		}
-		.bang table tr td input{
+		/*.bang table tr td input{
 			width: 200px;
 			height: 30px;
 			text-align: center;
-		}
-		.bang table tr td{
+		}*/
+		.bang table tr td{	
 			text-align: center;
 			padding: 10px;
+		}
+		#id1{
+			width: 250px;
+			height: 40px;
+			text-align: center;
+		}
+		#id2{
+			width: 250px;
+			height: 40px;
+			text-align: center;
+		}
+
+		#id3{
+			width: 250px;
+			height: 60px;
+
 		}
 	</style>
 </head>
@@ -43,10 +80,11 @@
 			<div class="bang">
 				<h1>Thêm sản phẩm</h1>
 				<table>
-				<tr><td><input type="text" name="Tensp" placeholder="Nhập tên sản phẩm"></td></tr>
-				<tr><td><input type="text" name="Giasp" placeholder="Giá sản phẩm"></td></tr>
-				<tr><td><div class="thongtin"><input type="text" name="TTSP" placeholder="Thông tin chi tiết sản phẩm"></div></td></tr>
-				<tr><td><input type="file" id="imageUpload" name="image" accept="image/*"></td></tr>
+				<tr><td><input type="file" id="imageUpload" name="image" accept="image/*"></td></tr>	
+				<tr><td><input type="text" name="Tensp" placeholder="Nhập tên sản phẩm" id="id1"></td></tr>
+				<tr><td><input type="text" name="Giasp" placeholder="Giá sản phẩm" id="id2"></td></tr>
+				<tr><td><div class="thongtin"><input id="id3" type="text" name="TTSP" placeholder="Thông tin chi tiết sản phẩm"></div></td></tr>
+				
 				</table>
 			</div>
 		</div>
