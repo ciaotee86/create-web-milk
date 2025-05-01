@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập & Đăng Ký</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ql {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            background: lightseagreen;
+            height: 100px;
+            gap: 40px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 32px;
+            color: white;
+            font-family: 'Lobster', cursive;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px); /* Trừ chiều cao của thanh .ql */
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+        background: white;
+        padding: 40px; /* Tăng khoảng cách bên trong để form cao hơn */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 400px; /* Tăng chiều rộng của form */
+    }
+
+    .form-container input {
+        width: 100%;
+        padding: 20px; /* Tăng chiều cao của các ô input */
+        margin: 20px 0; /* Tăng khoảng cách giữa các ô input */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-container input[type="submit"] {
+        width: 100%;
+        padding: 20px; /* Tăng chiều cao của nút */
+        background: lightseagreen;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px; /* Tăng kích thước chữ */
+    }
+
+        .form-container input[type="submit"]:hover {
+            background: #3cb371;
+        }
+
+        .form-container .switch {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-container .switch a {
+            color: lightseagreen;
+            text-decoration: none;
+        }
+
+        .form-container .switch a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <?php
+    if(isset($_POST['btnDk']))
+    {
+        $ten = $_POST['txtTen'];
+        $mk = ($_POST['txtMk']);
+        $email = $_POST['txtEmail'];
+        //thêm người dùng
+        require_once("ketnoi.php");
+        //B2: viết câu lênh sql
+        $sql = "INSERT INTO taikhoan(ten, mk, email)
+                                VALUES ('$ten', '$mk', '$email')";
+        $kq = mysqli_query($conn,$sql);
+        if($kq){
+            mysqli_close($conn);
+            //header("location:login.php");
+        }
+        else{
+            echo"Thêm mới người dùng không thành công" .mysqli_error($conn);
+        }
+    }
+ ?> 
+ <?php 
+        if(isset($_POST['btnDn']))
+    {
+        require_once("ketnoi.php");
+        $ten = $_POST['txtTen'];
+        $mk = $_POST['txtMk'];
+        $sql = "select * from taikhoan where ten = '$ten' and mk = '$mk'";
+        $kq = mysqli_query($conn,$sql);
+        //dùng hàm mysli_num_row($kq) để đếm bảng $kq có bao nhiêu hàng
+        if(mysqli_num_rows($kq)>0){
+            //có tồn tại người dùng đăng nhập -> đăng nhập thành công
+            //tạo phiên làm việc
+            $_SESSION['ten']= $ten;
+            mysqli_close($conn);
+            header("location:menu.php");
+        }
+        else{
+            echo"không tồn tại người dùng này trong hệ thống" .mysqli_error($conn);
+        }
+    }
+  ?>
+        <div class="logo">HERE WE ONLY SELL <br>100% FRESH MILK</div>
+    </div>
+
+    <div class="container">
+        <div class="form-container" id="login-form">
+            <h2>Đăng Nhập</h2>
+            <form method="post">
+                <input type="text" id="txtTen" name="txtTen" placeholder="Tên đăng nhập" required>
+                <input type="password" id="txtMk" name="txtMk" placeholder="Mật khẩu" required>
+                <input type="submit" id="btnDn" name="btnDn" value="Đăng Nhập">
+            </form>
+            <div class="switch">
+                Chưa có tài khoản? <a href="#" onclick="showRegister()">Đăng Ký</a>
+            </div>
+        </div>
+
+        <div class="form-container" id="register-form" style="display: none;">
+            <h2>Đăng Ký</h2>
+            <form method="post">
+                <input type="text" id="txtTen" name="txtTen" placeholder="Tên đăng nhập" required>
+                <input type="email" id="txtEmail" name="txtEmail" placeholder="Email" required>
+                <input type="password" id="txtMk" name="txtMk" placeholder="Mật khẩu" required>
+                <input type="password" id="txtMk2" name="txtMk2" placeholder="Xác nhận mật khẩu" required>
+                <input type="submit" id="btnDk" name="btnDk" value="Đăng ký">
+            </form>
+            <div class="switch">
+                Đã có tài khoản? <a href="#" onclick="showLogin()">Đăng Nhập</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+        }
+    </script>
+      //phai tao csdl tren xampp dong thoi co file ket noi
+      //csdl can phai co ten la milk trong do co table la taikhoan gom cac thong tin id,ten,email,mk
+      //duoi day la file ketnoi.php tu lam cua Quang co the dua theo de lam.
+ //      //<?php 
+	// $server = "localhost";
+	// 	$username ="root";
+	// 	$password= "";
+	// 	$db = "milk";
+	// 	$conn =mysqli_connect($server,$username,$password,$db) or die("kết nối CSDL thất bại");
+	// 	/*thiết lập mã tiếng việt khớp với mã tiếng việt khi tạo CSDL*/
+	// 	mysqli_set_charset($conn, "utf8");
+ // ?>
+</body>
+</html>
